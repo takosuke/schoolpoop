@@ -24,34 +24,49 @@ void	ft_putnbr(int nb)
 	char	numstring[11];
 
 	index = 10;
-	while (nb > 0)
-	{
-		numchar = (nb % 10) + 48;
-		numstring[index] = numchar;
-		index--;
-		nb = nb / 10;
-	}
-	while (index < 11)
-	{
-		ft_putchar(numstring[index]);
-		index++;
-	}
-	ft_putchar('\n');
+
+  if (nb == 0) 
+  {
+    ft_putchar('0');
+    ft_putchar('\n');
+  }
+  else
+  {
+    while (nb > 0)
+    {
+      numchar = (nb % 10) + 48;
+      numstring[index] = numchar;
+      index--;
+      nb = nb / 10;
+    }
+    index++;
+    while (index < 11)
+    {
+      ft_putchar(numstring[index]);
+      index++;
+    }
+
+    ft_putchar('\n');
+  }
 }
 
 int	main(void)
 {
-	int	a;
-	int	b;
-	int	c;
-	int	d;
 
-	a = 5321245;
-	ft_putnbr(a);
-	b = 1;
-	ft_putnbr(b);
-	c = 100;
-	ft_putnbr(c);
-	d = 2147483647;
+  int i;
+  int t[10];
+
+  t[0] = 0;
+  t[1] = 823781;
+  t[2] = 1;
+  t[3] = 33;
+  t[4] = 800008;
+  t[5] = 4;
+  t[6] = 25;
+  t[7] = 80;
+  t[8] = 9;
+  t[9] = 9;
+
+  while (i < 10) ft_putnbr(t[i++]);
 	return (0);
 }
