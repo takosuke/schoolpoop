@@ -9,7 +9,7 @@ int	ft_strlen(char *str)
 	}
 	return (len);
 }
-
+/*
 int main(int argc, char *argv[])
 {
 	if (argc > 1)
@@ -18,3 +18,4 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+*/
