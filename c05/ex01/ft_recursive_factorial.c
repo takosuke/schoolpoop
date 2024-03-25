@@ -1,17 +1,16 @@
 int ft_recursive_factorial(int nb)
 {
 	int i;
-	int result;
 
 	i = nb - 1;
 	if (nb > 12)
 		return (0);
+	if (nb == 0 || nb == 1)
+		return 1;
 	
-	result = nb * i;
-	while (i > 0)
-		nb = ft_recursive_factorial(nb - 0);
+//	nb = ft_recursive_factorial(nb - 0);
 
-	return (result);
+	return (nb * ft_recursive_factorial ( nb - 1));
 }
 
 #include <stdio.h>
